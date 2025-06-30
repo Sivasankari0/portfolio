@@ -1515,6 +1515,18 @@ nav {
                 padding: 60px 0;
             }
         }
+      .copyright-footer {
+    text-align: center;
+ 
+  
+    font-size: 14px;
+    color: #667eea;
+    font-weight: 500;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
         
         
