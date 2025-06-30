@@ -1293,3 +1293,95 @@ window.aboutPageFunctions = {
                 });
             });
         }
+
+        // Modal functionality JavaScript
+
+// Function to show resume options
+function showResumeOptions() {
+    document.getElementById('resumeModal').style.display = 'block';
+}
+
+// Function to show contact modal
+function showContact() {
+    document.getElementById('contactModal').style.display = 'block';
+}
+
+// Function to show hire me modal
+function showHireMe() {
+    document.getElementById('hireMeModal').style.display = 'block';
+}
+
+// Universal close modal function
+function closeModal(modalId) {
+    document.getElementById(modalId).style.display = 'none';
+}
+
+// Close modal when clicking outside of it
+window.onclick = function(event) {
+    const modals = ['resumeModal', 'contactModal', 'hireMeModal'];
+    modals.forEach(modalId => {
+        const modal = document.getElementById(modalId);
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+}
+
+// Close modal with Escape key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        const modals = ['resumeModal', 'contactModal', 'hireMeModal'];
+        modals.forEach(modalId => {
+            document.getElementById(modalId).style.display = 'none';
+        });
+    }
+});
+
+// Resume functions
+function viewResume() {
+    // Add your resume viewing logic here
+    alert('Opening resume viewer...');
+    // You can replace this with actual resume viewing functionality
+}
+
+function downloadResume() {
+    // Add your resume download logic here
+    alert('Downloading resume...');
+    // You can replace this with actual download functionality
+}
+
+// Copy phone number function
+function copyPhone() {
+    const phoneNumber = '+91 9059800230';
+    navigator.clipboard.writeText(phoneNumber).then(function() {
+        alert('Phone number copied to clipboard!');
+    }).catch(function(err) {
+        console.error('Could not copy text: ', err);
+        // Fallback for older browsers
+        const textArea = document.createElement('textarea');
+        textArea.value = phoneNumber;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+        alert('Phone number copied to clipboard!');
+    });
+}
+
+// Copy email function
+function copyEmail() {
+    const email = 'sivasankarimasa@gmail.com';
+    navigator.clipboard.writeText(email).then(function() {
+        alert('Email address copied to clipboard!');
+    }).catch(function(err) {
+        console.error('Could not copy text: ', err);
+        // Fallback for older browsers
+        const textArea = document.createElement('textarea');
+        textArea.value = email;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+        alert('Email address copied to clipboard!');
+    });
+}

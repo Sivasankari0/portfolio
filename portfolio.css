@@ -372,6 +372,9 @@ nav {
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     animation: slideIn 0.4s ease-out;
+      max-width: 600px !important;
+    padding: 40px !important;
+    margin: 8% auto !important
 }
 
 @keyframes slideIn {
@@ -400,6 +403,7 @@ nav {
     font-size: 16px;
     margin-bottom: 25px;
 }
+
 
 .modal-info {
     background: rgba(255, 255, 255, 0.05);
