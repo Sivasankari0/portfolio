@@ -1276,6 +1276,10 @@ nav {
         .barber-icon {
             background: linear-gradient(135deg, #feca57, #ff9ff3);
         }
+         .youtube-icon {
+            background: linear-gradient(135deg, #eb0e0e, hsl(50, 5%, 76%));
+        }
+
 
         .project-title {
             font-size: 1.5rem;
